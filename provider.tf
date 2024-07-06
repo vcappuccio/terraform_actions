@@ -5,14 +5,15 @@ terraform {
   required_providers {
     fakewebservices = "~> 0.1"
   }
+
+}
+
+provider "fakewebservices" {
+  token = var.provider_token
 }
 
 variable "provider_token" {
   type        = string
   description = "The provider token for authentication"
   sensitive   = true
-}
-
-provider "fakewebservices" {
-  token = var.provider_token
 }
