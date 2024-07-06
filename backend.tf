@@ -5,7 +5,7 @@
 # For more information, see https://www.terraform.io/docs/backends/types/remote.html
 terraform {
   cloud {
-    organization = "example-org-358622"
+    organization = "VoidHarvester"
 
     workspaces {
       name = "getting-started"
