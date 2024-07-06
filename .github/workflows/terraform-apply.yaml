@@ -10,7 +10,6 @@ env:
   TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
   TF_WORKSPACE: "getting-started"
   CONFIG_DIRECTORY: "./"
-  TF_VAR_provider_token: ${{ secrets.TF_API_TOKEN }}
 
 jobs:
   terraform:
@@ -33,6 +32,8 @@ jobs:
         with:
           workspace: ${{ env.TF_WORKSPACE }}
           directory: ${{ env.CONFIG_DIRECTORY }}
+          variables: |
+            provider_token=${{ secrets.TF_API_TOKEN }}
 
       - name: Create Apply Run
         uses: hashicorp/tfc-workflows-github/actions/create-run@v1.0.0
