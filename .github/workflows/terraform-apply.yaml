@@ -10,7 +10,7 @@ env:
   TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
   TF_WORKSPACE: "getting-started"
   CONFIG_DIRECTORY: "./"
-  TF_VAR_provider_token: ${{ secrets.PROVIDER_TOKEN }}
+  
 
 jobs:
   terraform:
