@@ -4,5 +4,4 @@ provider "fakewebservices" {
 
 variable "provider_token" {
   type = string
-  default = "${{ secrets.TF_API_TOKEN }}"
 }
