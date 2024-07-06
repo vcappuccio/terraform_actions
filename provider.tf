@@ -11,9 +11,3 @@ terraform {
 provider "fakewebservices" {
   token = var.provider_token
 }
-
-variable "provider_token" {
-  type        = string
-  description = "The provider token for authentication"
-  sensitive   = false
-}
