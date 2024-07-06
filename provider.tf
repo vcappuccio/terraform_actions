@@ -15,5 +15,5 @@ provider "fakewebservices" {
 variable "provider_token" {
   type        = string
   description = "The provider token for authentication"
-  sensitive   = true
+  sensitive   = false
 }
