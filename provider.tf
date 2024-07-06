@@ -5,6 +5,12 @@ terraform {
   required_providers {
     fakewebservices = "~> 0.1"
   }
+  cloud {
+    organization = "VoidHarvester"
+    workspaces {
+      name = "getting-started"
+    }
+  }
 }
 
 variable "provider_token" {
