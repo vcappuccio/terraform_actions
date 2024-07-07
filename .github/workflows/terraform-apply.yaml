@@ -6,9 +6,9 @@ on:
       - main
 
 env:
-  TF_CLOUD_ORGANIZATION: "VoidHarvester"
+  TF_CLOUD_ORGANIZATION: "example-org-358622"
   TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
-  TF_WORKSPACE: "getting-started"
+  TF_WORKSPACE: "terraform-github-actions"
   CONFIG_DIRECTORY: "./"
 
 jobs:
