@@ -1,13 +1,11 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
+#provider.tf
 
-terraform {
-  required_providers {
-    fakewebservices = "~> 0.1"
-  }
-
+variable "provider_token" {
+  type = string
+  sensitive = true
+  default = "dummy_value"
 }
 
 provider "fakewebservices" {
-
+  token = var.provider_token
 }

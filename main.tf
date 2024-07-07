@@ -1,25 +1,8 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
-# The following configuration uses a provider which provisions [fake] resources
-# to a fictitious cloud vendor called "Fake Web Services". Configuration for
-# the fakewebservices provider can be found in provider.tf.
-#
-# After running the setup script (./scripts/setup.sh), feel free to change these
-# resources and 'terraform apply' as much as you'd like! These resources are
-# purely for demonstration and created in HCP Terraform, scoped to your HCP Terraform
-# user account.
-#
-# To review the provider and documentation for the available resources and
-# schemas, see: https://registry.terraform.io/providers/hashicorp/fakewebservices
-#
-# If you're looking for the configuration for the remote backend, you can find that
-# in backend.tf.
-
+# main.tf
 
 resource "fakewebservices_vpc" "primary_vpc" {
   name       = "Primary VPC"
-  cidr_block = "0.0.0.0/1"
+  cidr_block = "10.1.0.0/16"
 }
 
 resource "fakewebservices_server" "servers" {
